@@ -17,4 +17,3 @@ jobs:
       - run: pip3 install --user --upgrade Cython==0.29.19 virtualenv
       - run: export PATH=$PATH:~/.local/bin/
       - run: buildozer android debug deploy run
-0 comments on commit e6d5f37

@@ -5,14 +5,16 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: sudo apt -y install python3-distutils
+      - run: sudo apt -y install python3-pip
+      - run: pip3 install setuptools
+      - run: sudo apt install -y git
+      - run: git clone https://github.com/kivy/buildozer
+      - run: cd buildozer
+      - run: pip install -e .
+      - run: sudo apt update
+      - run: sudo apt install -y git zip unzip openjdk-8-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
+      - run: pip3 install --user --upgrade Cython==0.29.19 virtualenv
+      - run: export PATH=$PATH:~/.local/bin/
+      - run: buildozer android debug deploy run
+0 comments on commit e6d5f37

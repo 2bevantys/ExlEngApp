@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build with Buildozer
-        uses: 2bevantys/ExlEngApp
+        uses: ExlEngApp
         id: buildozer
         with:
           workdir: test_app

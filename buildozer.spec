@@ -13,8 +13,7 @@ package.domain = org.exlengapp
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
-
+source.include_exts = py,png,jpg,kv,atlas,db
 # (list) List of inclusions using pattern matching
 #source.include_patterns = assets/*,images/*.png
 
@@ -29,7 +28,7 @@ source.include_exts = py,png,jpg,kv,atlas
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 0.2
+version = 0.2.2
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]

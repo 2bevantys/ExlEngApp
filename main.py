@@ -205,5 +205,5 @@ class Exleng(MDApp):
         cur.close()
 
 
-
-Exleng().run()
+if __name__ == '__main__':
+    Exleng().run()

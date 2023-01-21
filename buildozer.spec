@@ -43,7 +43,7 @@ requirements = kivy==2.1.0, kivymd==1.1.1, sqlite3, sdl2_ttf, pillow
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = %(source.dir)s/pictures/background.jpg
+presplash.filename = %(source.dir)s/pictures/boev.virus.jpg
 
 # (str) Icon of the application
 icon.filename = %(source.dir)s/pictures/icon.png
